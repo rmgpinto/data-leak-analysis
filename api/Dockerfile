@@ -13,7 +13,8 @@ RUN \
     apk upgrade && \
     apk add nodejs && \
     cd /www && \
+    chmod +x *.sh && \
     npm install
 
 EXPOSE 8081
-ENTRYPOINT cd /www && start.sh
+ENTRYPOINT cd /www && sh start.sh
