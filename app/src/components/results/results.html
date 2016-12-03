@@ -1,0 +1,10 @@
+<div ng-show="vm.searchResults !== undefined">
+    <div layout="row" layout-align="start center" flex>
+        <span class="md-caption">Data leaks: {{ vm.searchResults.length }}</span>
+    </div>
+    <div class="voffset" layout="row" layout-align="start center" flex>
+        <div ng-repeat="result in vm.searchResults">
+            {{ result.name }}
+        </div>
+    </div>
+</div>

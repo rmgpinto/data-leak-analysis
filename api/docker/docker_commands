@@ -1,0 +1,4 @@
+# Build backend
+docker build . -t rmgpinto/dla-backend
+# Run backend
+docker run -d -p 8081:8081 rmgpinto/dla-backend

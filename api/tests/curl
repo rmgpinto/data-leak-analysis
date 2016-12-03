@@ -1,0 +1,8 @@
+# dataleaks
+curl http://localhost:8081/api/dataleaks
+# email
+curl -H "Content-Type: application/json" -X POST -d '{"type":"email", "search":"..@co.jp"}' http://localhost:8081/api/dataleaks/search
+# domain
+curl -H "Content-Type: application/json" -X POST -d '{"type":"domain", "search":"qq.com"}' http://localhost:8081/api/dataleaks/search
+# pattern
+curl -H "Content-Type: application/json" -X POST -d '{"type":"pattern", "search":"993002"}' http://localhost:8081/api/dataleaks/search

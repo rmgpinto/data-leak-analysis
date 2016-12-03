@@ -1,0 +1,31 @@
+version: '2'
+services:
+  frontend:
+    image: rmgpinto/dla-frontend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
+    links:
+      - backend:backend
+  backend:
+    image: rmgpinto/dla-backend
+    environment:
+      - DATABASE=database
+      - CACHE=cache
+    ports:
+      - "8081:8081"
+    depends_on:
+      - cache
+      - database
+    links:
+      - database:database
+      - cache:cache
+  cache:
+    image: rmgpinto/dla-cache
+    ports:
+      - "6379:6379"
+  database:
+    image: rmgpinto/dla-database
+    ports:
+      - "27017:27017"

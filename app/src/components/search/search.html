@@ -1,0 +1,13 @@
+<div layout="row" layout-align="center center" flex>
+    <form name="searchForm" ng-submit="vm.searchDataLeak(vm.searchText)">
+        <md-input-container class="width">
+            <label>Search</label>
+            <input name="search" ng-model="vm.searchText" ng-required="true" ng-disabled="vm.searchingDataLeak">
+            <div ng-messages="searchForm.search.$error">
+                <div ng-message="required">Please enter an email or a domain.</div>
+            </div>
+        </md-input-container>
+        <md-button class="md-primary" ng-click="vm.searchDataLeak(vm.searchText)" ng-disabled="vm.searchText === undefined || vm.searchText === '' || vm.searchingDataLeak">Search</md-button>
+    </form>
+</div>
+<md-progress-linear md-mode="indeterminate" ng-show="vm.searchingDataLeak"></md-progress-linear>

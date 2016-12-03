@@ -1,0 +1,4 @@
+# Build cache
+docker build . -t rmgpinto/dla-cache
+# Run cache
+docker run -d -p 6379:6379 rmgpinto/dla-cache

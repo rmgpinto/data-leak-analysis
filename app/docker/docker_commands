@@ -1,0 +1,4 @@
+# Build frontend
+docker build . -t rmgpinto/dla-frontend
+# Run frontend
+docker run -d -p 8080:8080 rmgpinto/dla-frontend

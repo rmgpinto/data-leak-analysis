@@ -1,0 +1,4 @@
+# Build database
+docker build . -t rmgpinto/dla-database
+# Run database
+docker run -d -p 27017:27017 rmgpinto/dla-database
