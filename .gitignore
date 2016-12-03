@@ -1,3 +1,4 @@
+.vscode
 db/rawdata
 app/dist
 app/node_modules
