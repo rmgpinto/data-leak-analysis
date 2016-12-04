@@ -6,5 +6,4 @@ angular.module('app', [
 require('../dist/temp/templateCacheTemplates');
 require('../dist/temp/templateCachePartials');
 require('search');
-require('results');
 require('dataLeakFactory');

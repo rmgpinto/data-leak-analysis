@@ -9,7 +9,7 @@
             dataLeakFactory.search(searchText).then(
                 function (searchResults) {
                     vm.searchingDataLeak = false;
-                    dataLeakFactory.searchResults = searchResults;
+                    vm.searchResults = searchResults;
                 },
                 function (error) {
                     vm.searchingDataLeak = false;

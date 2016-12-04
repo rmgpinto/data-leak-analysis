@@ -91,7 +91,6 @@ gulp.task('build-js', ['build-partials'], function (cb) {
         paths: [
             './src',
             './src/components/search',
-            './src/components/results',
             './src/services'
         ],
         transform: [ngAnnotate]

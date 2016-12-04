@@ -7,7 +7,7 @@
             self.searchResults = undefined;
             self.search = function (searchText) {
                 var deferred = $q.defer();
-                $http.post('/api/dataleaks', { type: 'pattern', search: searchText }).then(
+                $http.post('/api/dataleaks/search', { type: 'pattern', search: searchText }).then(
                     function (response) {
                         self.searchResults = response;
                         deferred.resolve(response.data);
